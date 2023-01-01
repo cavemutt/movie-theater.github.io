@@ -329,6 +329,7 @@ img {
     justify-content: center;
     background: linear-gradient(to bottom, #febb3c, #f9e3a0, #ffd856, #d08619);
     background-clip: text;
+    -webkit-background-clip: text;
     color: transparent;
     filter: drop-shadow(0.2rem 0.2rem 0.1rem #555);
     -webkit-filter: drop-shadow(0.2rem 0.2rem 0.1rem #555);    
@@ -805,6 +806,7 @@ img {
     font-size: 2.8rem;
     background: linear-gradient(to top, #febb3c, #f9e3a0, #ffd856, #d08619);
     background-clip: text;
+    -webkit-background-clip: text;
     color: transparent;
     filter: drop-shadow(0.1rem 0.1rem 0.2rem #333);
     -webkit-filter: drop-shadow(0.1rem 0.1rem 0.2rem #333);
@@ -821,6 +823,7 @@ img {
     font-weight: bold;
     background: linear-gradient(to bottom, #febb3c, #f9e3a0, #ffd856, #d08619);
     background-clip: text;
+    -webkit-background-clip: text;
     color: transparent;
     filter: drop-shadow(0.1rem 0.1rem 0.2rem #444);
     -webkit-filter: drop-shadow(0.1rem 0.1rem 0.2rem #444);
@@ -1110,6 +1113,7 @@ img {
     font-size: 2.8rem;
     background: linear-gradient(to top, #febb3c, #f9e3a0, #ffd856, #d08619);
     background-clip: text;
+    -webkit-background-clip: text;
     color: transparent;
     margin: 0.5em 0 0 0;
     text-align:center;
@@ -1131,6 +1135,7 @@ img {
     background-position: left;
     color: transparent;
     background-clip: text;
+    -webkit-background-clip: text;
     background-size: 400%;
     width: 33%;
     height: 100%;
@@ -1260,6 +1265,7 @@ img {
     padding-bottom: 1rem;
     background: linear-gradient(to top right, #d08619, #febb3c, #f9e3a0, #ffd856, #d08619);
     background-clip: text;
+    -webkit-background-clip: text;
     color: transparent;
     filter: drop-shadow(0.1rem 0.2rem 0.1rem rgba(0, 0, 0, 0.7));
     -webkit-filter: drop-shadow(0.1rem 0.2rem 0.1rem rgba(0, 0, 0, 0.7));
@@ -1320,6 +1326,7 @@ img {
     margin-bottom: .8em;
     background: linear-gradient(to top, #d08619, #febb3c, #d08619);
     background-clip: text;
+    -webkit-background-clip: text;
     color: transparent;
     filter: drop-shadow(0.1rem 0.2rem 0.1rem rgba(0, 0, 0, 0.7));
     -webkit-filter: drop-shadow(0.1rem 0.2rem 0.1rem rgba(0, 0, 0, 0.7));
@@ -1391,6 +1398,7 @@ img {
     margin-bottom: 1em;
     background: linear-gradient(to top, #d08619, #febb3c, #f9e3a0, #ffd856, #d08619);
     background-clip: text;
+    -webkit-background-clip: text;
     color: transparent;
 }
 
@@ -1559,6 +1567,7 @@ img {
     color: var(--Gold-dark);
     background: linear-gradient(to top, #d08619, #febb3c, #f9e3a0, #ffd856, #d08619);
     background-clip: text;
+    -webkit-background-clip: text;
     color: transparent;
     filter: drop-shadow(0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 1));
     -webkit-filter: drop-shadow(0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 1));
@@ -2004,6 +2013,7 @@ img {
     font-size: 3rem;
     background: linear-gradient(to top, #d08619, #febb3c, #f9e3a0, #ffd856, #d08619);
     background-clip: text;
+    -webkit-background-clip: text;
     color: transparent;
     letter-spacing: 0.1rem;
     line-height: 2.5rem;
