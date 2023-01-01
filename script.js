@@ -277,7 +277,13 @@ menuBtn.addEventListener('click', () => {
     body.style.overflowY = 'auto'
 })
 
-
+// CONTACT SECTION - disable click defaults
+const disabled = document.querySelectorAll('.disable')
+disabled.forEach(thing => {
+    thing.addEventListener('click', (e) => {
+        e.preventDefault()
+    })
+})
 
 // ABOUT SECTION - CAROUSEL
 
