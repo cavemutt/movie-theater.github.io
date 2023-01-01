@@ -2998,6 +2998,19 @@ footer span {
     }
 }
 
+@media only screen and (max-width: 700px) {
+    .logo-container,
+    .ns,
+    .the-elm,
+    .next-title,
+    .showing-next,
+    .ofs-title,
+    .calendar-title,
+    .modal-title,
+    .menu-title,
+    .about-title {
+        color: #febb3c;
+    }    
 
 @media only screen and (max-width: 680px) {
     .hero-section .left-side {
