@@ -2937,6 +2937,7 @@ footer span {
     .contact-section {
         height: max-content;
         flex-direction: column;
+        gap: 4em;
     }
     .email-list-wrapper:hover,
     .email-list-wrapper:focus,
@@ -3125,7 +3126,8 @@ footer span {
     .ofs-h4 {
         font-family: var(--Title-font);
     }
-    .ofs {
+    .ofs,
+    .ofs-h4 {
         font-weight: bold;
     }
 }
