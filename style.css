@@ -3010,7 +3010,12 @@ footer span {
     .menu-title,
     .about-title {
         color: #febb3c;
-    }    
+        font-family: var(--Title-font);
+    }  
+    .loop-paragraph {
+        padding: 2em 1em;
+        text-align: center;
+    }
 }
 
 @media only screen and (max-width: 680px) {
@@ -3115,6 +3120,13 @@ footer span {
         width: 9%;
         top: calc(17em * 0.8);
         left: calc(13.8em * 0.8);
+    }
+    
+    .ofs-h4 {
+        font-family: var(--Title-font);
+    }
+    .ofs {
+        font-weight: bold;
     }
 }
 
