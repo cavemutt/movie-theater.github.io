@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/Flip.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/MotionPathPlugin.min.js" defer></script>
+    <script src="./script.js" defer></script>
+    <title>The Elm Clone</title>
+</head>
+<body onmouseover="">
+
+    <!-- preloader -->
+    <div class="preloader">
+        <img src="./assets/reel-new.png" alt="spinning film reel">
+    </div>
+    <!-- end preloader -->
+
+    <!-- Pre-Hero animation -->
+    <div class="pre-hero-section">
+        <div class="welcome" id="welcome">
+            <p class="hero-welcome" id="welcome-text">Welcome to</p>
+            <div class="logo-container" id="logo-container">
+                <h2 class="the" id="the">THE</h2>
+                <div class="logo-row">
+                    <img src="./assets/Hero/star.png" alt="Golden Star" class="logo-img" id="star">
+                    <h1 class="elm" id="elm">ELM</h1>
+                </div>
+                <h1 class="draught" id="draught">Draughthouse</h1>
+            </div>
+        </div>
+    </div>
+    <!-- end Pre-Hero Animation -->
+
+    <!-- Main Section -->
+    <main class="main">
+        <div class="cursor"></div>
+
+        <!-- sticky nav -->
+        <div class="burger-container" aria-label="menu" aria-controls="sticky-nav" aria-expanded="false">
+            <div class="burger line1"></div>
+            <div class="burger line2"></div>
+            <div class="burger line3"></div>
+        </div>
+        <nav class="sticky-nav-container" id="sticky-nav" data-visible="false">
+            <ul class="sticky-nav">
+                <li data-nav="hero-section"><a href="#hero-section">Home</a></li>
+                <li data-nav="now-showing"><a href="#now-showing">Now Showing</a></li>
+                <li data-nav="future-events"><a href="#future-events">Events</a></li>
+                <li data-nav="menu"><a href="#menu">Menu</a></li>
+                <li data-nav="contact"><a href="#contact">Contact Us</a></li>
+                <li data-nav="about"><a href="#about">About</a></li>
+            </ul>
+        </nav>
+        <!-- end of sticky nav -->
+
+        <!-- Section 1 Hero -->
+        <!-- actual Hero section -->    
+        <section class="hero-section" id="hero-section">
+            <img src="./assets/Hero/reel-new-long.png" alt="Gold Film Reel" class="reel" id="reel">
+            <div class="left-side">
+                <div class="welcome" id="hero-welcome">
+                    <p class="hero-welcome">Welcome to</p>
+                    <div class="logo-container">
+                        <p class="the">THE</p>
+                        <div class="logo-row">
+                            <img src="./assets/Hero/star.png" alt="Golden Star" class="logo-img">
+                            <h1 class="elm">ELM</h1>
+                        </div>
+                        <h1 class="draught">Draughthouse</h1>
+                    </div>
+                </div>
+                <div class="food-group-container" id="food-container">
+                    <div class="food-group">
+                        <img src="./assets/Hero/nachos.png" alt="cheesy nachos" class="nachos">
+                        <img src="./assets/Hero/popcorn-box copy.png" alt="Large Yummy Popcorn" class="popcorn cheez" data-audio="./assets/sounds/popcorn.mp3" title="from David Hurley on Unsplash">
+                        <img src="./assets/Hero/beer.png" alt="a Cold Dud Light" class="beer cheez" data-audio="./assets/sounds/beer.mp3" title="from Dean Ricciardi on Unsplash">
+                        <img src="./assets/Hero/wineglass-transparent copy.png" alt="Glass of Red Wine" class="wine cheez" data-audio="./assets/sounds/wine.mp3" title="from Mona Miller on Unsplash">
+                        <img src="./assets/Hero/pepsi-fountain copy.png" alt="Fountain Soda" class="soda cheez" data-audio="./assets/sounds/soda.mp3" title="click!">
+                        <img src="./assets/Hero/pizza.png" alt="Gooey Hot Pizza" class="pizza cheez" data-audio="./assets/sounds/mmm.mp3" title="from Quin Engle on Unsplash">
+                        <p class="food-p">(click on your favorite!)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="right-side">
+                <div class="hero-quote-container">
+                    <p class="hero-quote-1" id="quote">"The Best Place for a Cheap Night Out!"</p>
+                    <img src="./assets/line-med.png" alt="fancy line" id="quote-line" class="squiggly">
+                    <p class="hero-quote-author" id="author">--Everybody</p>
+                </div>
+                <!-- Navbar -->
+                <ul class="main-nav" id="main-nav">
+                    <li><a href="#now-showing">Now Showing</a><br><span>- Spiderman : No Way Home</span></li>
+                    <li><a href="#future-events">Future Events</a><br><span>- Comedy Show! Sept. 24th!</span><br><span>- Rocky Horror on Oct. 1st!</span><br><span>- Patriots Games!</span></li>
+                    <li><a href="#menu">Menu / Take Out</a></li>
+                    <li><a href="#about">About The Elm</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+                <div class="hero-cta" id="cta">
+                    <p class="cta-paragraph">What's coming up next?!</p>
+                    <a href="#contact" class="email-btn">Notify Me!</a>
+                </div>
+                <!-- end of Navbar -->
+            </div>
+            <div class="hero-info" id="info">
+                <h3>LARGE POPCORN : $3.00</h3>
+                <h3>ADMISSION only <span>$6.00</span>!</h3>
+                <h3>FUN : Always Free</h3>
+            </div>
+        </section>
+        <!-- end of Section 1 Hero -->
+
+        <!-- Section 2 Now Showing -->
+        <section class="now-showing" id="now-showing">
+            <div class="title-section">
+                <img src="./assets/Vader-pleased1.png" alt="Vader is pleased" class="vader cheez slide-in from-left" data-audio="./assets/sounds/Badum-tss.mp3" title="Give me a click!">
+                <div class="ns-title-group">
+                    <img src="./assets/lg-squiggle.png" alt="fancy gold squiggly" class="ns-squiggle-1 fade-up" data-rate="0.01">
+                    <h2 class="ns fade-up">Now Showing <span class="at fade-up">at</span> <span class="the-elm fade-up">The Elm</span></h2>
+                    <img src="./assets/lg-squiggle.png" alt="fancy gold squiggly" class="ns-squiggle-2 fade-up">
+                    </div>
+            </div>
+            <div class="ns-main">
+                <div class="ns-left-side">
+                    <div class="ns-movie-info">
+                        <h2 class="ns-movie-title">Spiderman : No Way Home</h2>
+                        <div class="ns-movie-stats">
+                            <p>2021</p>
+                            <p>3hrs</p>
+                        </div>
+                        <p class="ns-movie-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus tenetur ducimus commodi earum ut libero incidunt quasi sint omnis, fugit porro officiis consequatur! Expedita beatae iusto libero quibusdam facilis debitis porro quia corrupti, laborum alias fugit amet eum hic qui dicta nam esse eius id ullam ducimus molestias dolore cumque?</p>
+                    </div>
+                    <div class="ns-left-bottom">
+                        <div class="showtimes"> 
+                            <h3>Showtimes</h3>
+                            <p>9/2 <span>Fri</span> 7:30pm</p>
+                            <p>9/3 <span>Sat</span> 7:30pm</p>
+                            <p>9/4 <span>Sun</span> 7:30pm</p>
+                            <p>9/5 <span>Mon</span> closed</p>
+                            <p>9/6 <span>Tue</span> 7:30pm</p>
+                            <p>9/7 <span>Wed</span> 7:30pm</p>
+                            <p>9/8 <span>Thu</span> 7:30pm</p>
+                        </div>
+                        <div class="other-info">
+                            <h4 class="other-info-title">General Info</h4>
+                            <p>Admission: $6.00 pp</p>
+                            <p>Handicap Friendly &#9855</p>
+                            <p>Gift Certificates Available</p>
+                            <p>Cash only</p>
+                            <p>Concession Items : <span>so much cheaper</span> than a big theater!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ns-right-side">
+                    <div class="ns-theater">
+                        <div class="screen-glow"></div>
+                        <img src="./assets/the-elm-audience copy-1.png" alt="Trailer Theater" class="ns-theater-img">
+                        <div class="video-wrapper">
+                            <iframe src="https://www.youtube.com/embed/rt-2cxAiPJk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <img src="./assets/head.png" alt="audience detail" class="head">
+                    </div>
+                    <p class="trailer-btn">(Click on the movie screen to watch trailer!)</p>
+                </div>
+            </div>
+        </section>
+        <!-- end of Section 2 Now Showing -->
+
+        <!-- Section 3 Other Fun Stuff -->
+        <section class="next" id="future-events">
+            <img src="./assets/small-squiggle.png" alt="">
+            <h1 class="next-title fade-up">Coming Up Next!</h1>
+            <div class="showing-next-wrapper">
+                <img src="./assets/Elvis-poster.jpg" alt="next movie" class="sn-movie-img parallax-element" data-rate="0.02">
+                <div class="showing-next" data-rate="0.01">
+                    <h2 class="sn-title">Elvis</h2>
+                    <p class="sn-info line-1"><span>2022</span>159 min</p>
+                    <p class="sn-info line-2"><span>starring : </span> Austin Butler, Tom Hanks</p>
+                    <p class="sn-dates"><span>showing</span>9/16/22 - 9/23/22</p>
+                </div>
+                <img src="./assets/deadpool1.png" alt="Deadpool loves The Elm" class="sn-deadpool cheez slide-in from-right" data-audio="./assets/sounds/Badum-tss.mp3" title="Give me a click!">
+            </div>
+            <div class="future-events-wrapper">
+                <img src="./assets/harley-quinn1.png" alt="Harley Quinn loves The Elm!" class="ofs-harley cheez slide-in from-left" data-audio="./assets/sounds/Badum-tss.mp3" title="Give me a click!">
+                <div class="other-fun-stuff">
+                    <h2 class="ofs-title fade-up">Other Fun Stuff <span>at</span> The ELM!</h2>
+                    <div class="ofs-list">
+                    <h4 class="ofs-h4 fade-up">COMEDY SHOWS!</h4>
+                    <p class="ofs fade-up">Next one on SATURDAY SEPTEMBER 24th!</p>
+                    <h4 class="ofs-h4 fade-up">WATCH THE GAMES HERE!<h4>
+                    <p class="ofs fade-up">PATRIOTS games on the Big Screen, Concession Stand is open and Free Admission!</p>
+                    <h4 class="ofs-h4 fade-up">THE ROCKY HORROR PICTURE SHOW!</h4>
+                    <p class="ofs fade-up">JOIN US OCTOBER 1st!<br>A yearly tradition complete with a Live Floor Show,<br>it's sure to put a smile on any lips!</p>
+                    </div>
+                </div>
+                <div class="calendar-wrapper">
+                    <h3 class="calendar-title">Calendar of Events</h3>
+                    <button class="calendar-btn">Click for More Info!</button>
+                    <img src="./assets/calendar.jpg" alt="Calendar of Events" class="calendar-img">
+                </div>
+            </div>
+            <dialog class="ofs-modal center" id="modal">
+                <div class="modal-title">
+                    <h2>Other Fun Stuff at The Elm!</h2>
+                </div>
+                <div class="modal-content center">
+                    <img src="./assets/calendar.jpg" alt="Calendar of Events" class="calendar">
+                    <div class="modal-list center">
+                        <div class="comedy">
+                            <h3>Comedy Shows!</h3>
+                            <p>next : Sunday September 24, 2022 <span>10:00pm</span></p>
+                            <p>Tickets $25 at the door, $20 in advance</p>
+                            <a href="#">Buy Advance Tickets Here</a>
+                        </div>
+                        <div class="games">
+                            <h3>Patriots Games!</h3>
+                            <p>next : Sunday September 25, 2020 <span>1:00pm</span></p>
+                            <p>following Sunday October 2, 2022 <span>4:25pm</span></p>
+                            <p>Free Admission</p>
+                        </div>
+                        <div class="rocky">
+                            <h3>Rocky Horror Picture Show!</h3>
+                            <p>Coming October 1,2022!</p>
+                            <p>Tickets $30 at the door, $25 in advance</p>
+                            <a href="#">Buy Advance Tickets Here</a>
+                        </div>
+                    </div>
+                    <div class="imgs center">
+                        <img src="./assets/comedy.jpg" alt="comedy show">
+                        <img src="./assets/big-pats.jpg" alt="Patriots on the big screen">
+                        <img src="./assets/rh.jpg" alt="Rocky Horror with Floor Show">
+                    </div>
+                </div>
+                <button class="close">Back to the Main Page</button>
+            </dialog>
+        </section>
+        <!-- end of Section 3 Other Fun Stuff -->
+
+        <!-- Section 4 Menu-Eat in and Takeout -->
+        <section class="menu-section" id="menu">
+            <img src="./assets/popcorn-single copy.png" alt="single popcorn" style="--x:10vw; --y:6vh; --t:3s;" data-speed="-5.3" class="layer" title="from Mockup Graphics on Unsplash">
+            <img src="./assets/popcorn-single copy.png" alt="single popcorn" style="--x:7vw; --y:58vh;  --t:3.5s;" data-speed="5" class="layer" title="from Mockup Graphics on Unsplash">
+            <img src="./assets/popcorn-single copy.png" alt="single popcorn" style="--x:80vw; --y:9vh; --t:4.5s;" data-speed="-2.5" class="layer" title="from Mockup Graphics on Unsplash">
+            <img src="./assets/popcorn-single copy.png" alt="single popcorn" style="--x:85vw; --y:38vh; --t:4.8s;" data-speed="6.2" class="layer" title="from Mockup Graphics on Unsplash">
+            <img src="./assets/popcorn-single copy.png" alt="single popcorn" style="--x:56vw; --y:64vh;  --t:5.8s;" data-speed="5.5" class="layer" title="from Mockup Graphics on Unsplash">
+            <img src="./assets/popcorn-single copy.png" alt="single popcorn" style="--x:36vw; --y:15vh;  --t:3.1s;" data-speed="-2" class="layer" title="from Mockup Graphics on Unsplash">
+            <img src="./assets/popcorn-single copy.png" alt="single popcorn" style="--x:58vw; --y:22vh; --t:3.7s;" data-speed="-4" class="layer" title="from Mockup Graphics on Unsplash">
+            <img src="./assets/popcorn-single copy.png" alt="single popcorn" style="--x:23vw; --y:72vh;  --t:4.3s;" data-speed="-3" class="layer" title="from Mockup Graphics on Unsplash">
+            <img src="./assets/popcorn-single copy.png" alt="single popcorn" style="--x:67vw; --y:46vh; --t:3.9s;" data-speed="-6" class="layer" title="from Mockup Graphics on Unsplash">
+            <img src="./assets/popcorn-single copy.png" alt="single popcorn" style="--x:88vw; --y:80vh;  --t:2.4s;" data-speed="5.7" class="layer" title="from Mockup Graphics on Unsplash">
+            <img src="./assets/popcorn-single copy.png" alt="single popcorn" style="--x:18vw; --y:26vh; --t:4.2s;" data-speed="3" class="layer" title="from Mockup Graphics on Unsplash">
+            <img src="./assets/popcorn-single copy.png" alt="single popcorn" style="--x:31vw; --y:48vh;  --t:3.6s;" data-speed="5.8" class="layer" title="from Mockup Graphics on Unsplash">
+
+            <img src="./assets/small-squiggle-brown.png" alt="fancy squiggle" class="fancy-line">
+            <div class="title-wrapper">
+                <h2 class="menu-title parallax-element" data-rate="0.005">Menu <span>at</span> The Elm</h2>
+                <h3 class="menu-title-2 parallax-element" data-rate="0.005">Eat During the Show</h3>
+                <h3 class="menu-title-3 parallax-element" data-rate="0.03">Take Out for dinner/snacks and your own events!</h3>
+                <p>For Take Out, call 508-555-5555 <br>between 5 - 8pm (closed Mondays)</p>
+            </div>
+            <img src="./assets/menu.jpg" alt="Menu" id="menu-img" class="menu-img">
+            <dialog id="menu-modal" class="menu-img-modal">
+                <button class="menu-btn center" id="menu-button"></button>
+                <img src="./assets/menu.jpg" alt="Menu" class="menu-img">
+            </dialog>
+            <img src="./assets/spiderman.png" alt="Spiderman Loves the Elm" class="menu-spiderman cheez slide-in from-right" data-audio="./assets/sounds/Badum-tss.mp3" title="Give me a click!">
+        </section>
+        <!-- end of Section 4 Menu -->
+    
+        <!-- Section 5 Contact and Mailing List -->
+        <section class="contact-main" id="contact">
+        <img src="./assets/small-squiggle.png" alt="fancy line" class="fancy-line contact-line">
+            <div class="contact-section">
+                <div class="contact-left">
+                    <h3 class="contact-title fade-up">Stay In the Loop!</h3>
+                    <p class="loop-paragraph fade-up">We'll let you know what's coming up next!</p>
+                    <div class="email-list-wrapper">
+                        <form action="/" method="GET" id="form-1">
+                            <div class="name-wrapper">   
+                                <input type="text" name="name" required autocomplete="off" class="name-input input" id="name-1">
+                                <label class="name-label label">
+                                    <span class="name-content content">Your name</span>
+                                </label>
+                            </div>
+                            <div class="email-wrapper">   
+                                <input type="email" required autocomplete="off" class="email-input input" id="name-2">
+                                <label class="email-label label">
+                                    <span class="email-content content">Your email</span>
+                                </label>
+                            </div>
+                            <button type="submit" class="submit-1 submit-btn" id="submit-1">Sign up for our emails!</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="contact-right">
+                    <h3 class="contact-title fade-up"><span>Call us at 508-555-5555 or</span><br>Send us a message!</h3>
+                    <div class="contact-wrapper">
+                        <form action="/" method="GET" id="form-2">
+                            <div class="name-wrapper">   
+                                <input type="text" required autocomplete="off" class="name-input input" id="name-2">
+                                <label class="name-label label">
+                                    <span class="name-content content">Your name</span>
+                                </label>
+                            </div>
+                            <div class="email-wrapper">   
+                                <input type="email" required autocomplete="off" class="email-input input" id="email-2">
+                                <label class="email-label label">
+                                    <span class="email-content content">Your email</span>
+                                </label>
+                            </div>
+                            <div class="textarea-wrapper">
+                                <textarea name="message" id="message" cols="30" rows="10" id="message" placeholder="Your message here"></textarea>
+                            </div>
+                            <button type="submit" class="submit-2 submit-btn" id="submit-2">Submit your question/comment</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end of Section 5 Contact and Mailing List -->
+
+        <!-- Section 6 About & History -->
+
+        <section class="about-section" id="about">
+            <img src="./assets/lg-squiggle.png" alt="fancy line" class="fade-up">
+            <div class="about-main">
+                <div class="about-left">
+                    <h3 class="about-title">The Elm<br><span>Draughthouse</span></h3>
+                    <p>35 Elm Street<br>Millbury, MA<br>508-555-5555</p>
+                    <p>The Elm was once the meeting place of the world's greatest Superheroes. After a time, the film and theater people started moving in, and the superheroes became executive producers. The theater people became brewers, naturally, but as expected drank more than they sold. Now, in honor of the greatness that came before, the heroes of The Elm Draughthouse are dedicated to serving the surrounding communities with tasty food, including the BEST popcorn, yummy beverages for all ages, and some of the world's greatest entertainment!</p>
+                </div>
+                <div class="about-right">
+                    <div class="slider-wrapper center">
+                        <button class="arrow left" id="prev">&#9756</button>
+                        <div class="carousel-container">
+                            <div class="carousel-slide">
+                                <img src="./assets/Elm-Outside-fisheye.jpg" alt="" class="current">
+                                <img src="./assets/slideshow/movies-family.jpeg" alt="">
+                                <img src="./assets/slideshow/couples-beer-pizza.jpg" alt="">
+                                <img src="./assets/slideshow/girlsnight-bottle.jpg" alt="">
+                                <img src="./assets/slideshow/guys-beer-nachos.jpg" alt="">
+                                <img src="./assets/slideshow/movie-kids-popcorn.jpg" alt="">
+                                <img src="./assets/slideshow/nachos-wahlberg.jpg" alt="">
+                                <img src="./assets/slideshow/hot-dogs.jpg" alt="">
+                                <img src="./assets/slideshow/movies-older-couple.jpg" alt="">
+                                <img src="./assets/slideshow/pub-table.jpeg" alt="">
+                                <img src="./assets/slideshow/girlsnight-clink.jpg" alt="">
+                                <img src="./assets/slideshow/movies-mid-age-couples.jpeg" alt="">
+                                <img src="./assets/slideshow/stringy-pizza.jpg" alt="">
+                                <img src="./assets/slideshow/young-couple.jpeg" alt="">
+                                <img src="./assets/slideshow/movies-guys.jpg" alt="">
+                                <img src="./assets/slideshow/movies-mixed.jpg" alt="">
+                                <img src="./assets/slideshow/movies-multi-adults.jpeg" alt="">
+                                <img src="./assets/slideshow/girlsnight-glasses.jpg" alt="">
+                                <img src="./assets/slideshow/random-concession.jpg" alt="">
+                            </div>
+                        </div>
+                        <button class="arrow right" id="next">&#9758</button>
+                    
+
+                    </div>
+                </div>
+            </div>
+            <div class="merch-section">
+                <h2 class="merch-title">Elm Draughthouse merch and gift certificates available in-house!</h2>
+                <div class="merch-img-wrapper">
+                    <img src="./assets/merch/black-elm-t.png" title="shirt original blank from Mockup Lab on Pixabay" alt="Elm T-shirt" class="merch-img">
+                    <img src="./assets/merch/mug-reel-shadow.png" title="mug original blank from Gadost0 on Pixabay" alt="Film Reel Mug" class="merch-img">
+                    <img src="./assets/merch/black-cheap-t.png" title="shirt original blank from Mockup Lab on Pixabay" alt="Cheap Night T-shirt" class="merch-img">
+                    <img src="./assets/merch/elm-mug-shadow.png" title="mug original blank from Gadost0 on Pixabay" alt="Elm Mug" class="merch-img">
+                    <img src="./assets/merch/black-show-t.png" title="shirt original blank from Mockup Lab on Pixabay" alt="Now Showing T-shirt" class="merch-img">
+                    <img src="./assets/merch/mug-cheap-shadow.png" title="mug original blank from Gadost0 on Pixabay" alt="Cheap Night Mug" class="merch-img">
+                </div>
+            </div>
+        </section>
+        <!-- end of Section 6 About & History -->
+
+        <!-- footer -->
+        <section class="footer-section">
+            <footer>Hand-coded with love by <span>jencat & cavemutt</span> Copyright &copy; 2022 All rights reserved</footer>
+        </section>
+        <!-- end of footer -->
+    </main>
+    
+    
+</body>
+</html>
