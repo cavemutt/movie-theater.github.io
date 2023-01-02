@@ -45,14 +45,14 @@ body {
     color: var(--Gold-white);
     background-color: #000;
     cursor: url(./assets/arrow-25px.png), default;
-    overscroll-behavior-x: none;
+    overscroll-behavior: none;
     user-select: none;
 }
 
 .cursor {
     width: 35px;
     height: 35px;
-    background-image: url(./assets/star-shape-nofill.png), radial-gradient(rgba(247, 226, 89, 0.7), transparent 80%);
+    background-image: url(./assets/star-shape-nofill.png), radial-gradient(rgba(247, 226, 89, 0.7), transparent 50%);
     background-size: cover;
     background-repeat: no-repeat;
     position: absolute;
