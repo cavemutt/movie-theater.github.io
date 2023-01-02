@@ -238,6 +238,13 @@ if(screen.availWidth >= 490) {
     sliders.forEach(slider => {
         appearOnScroll.observe(slider)
     })
+} else {
+    fadeUps.forEach(fader => {
+        fader.classList.add('appear')
+    })
+    sliders.forEach(slider => {
+        slider.classList.add('appear')
+    })
 }
 
 // SOUND EFFECTS on certain elements
