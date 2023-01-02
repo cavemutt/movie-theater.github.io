@@ -21,6 +21,8 @@ window.addEventListener('load', () => {
     preloader.classList.add('preloader-end')
     if(screen.availWidth >= 860){
         go()
+    } else if(screen.availWidth <= 490) {
+        goXsmall()
     } else {
         goSmall()
     }
@@ -134,6 +136,23 @@ function goSmall() {
     return tlSmall
 }
 
+//extra small screens
+function goXsmall() {
+    const tlXsmall = new gsap.timeline();
+    
+    tlXsmall
+    .set(preHero, {opacity: 0, height: '0vh'})
+    .set(heroSection, {opacity: 0})
+    .set(reel, {opacity: 0, scale: 0})
+    .set(food, {scale: 0, opacity: 0})
+
+    .to(heroSection, {opacity: 1, duration: 0.5})
+    .fromTo(heroWelcome,{opacity: 0, scale: 0.5}, {opacity: 1, scale: 1, duration: 0.5})
+    .to(food, {scale: 1, opacity: 1, duration: 1.5, ease: 'elastic.out(1, 0.4)'})
+
+    return tlXsmall
+}
+
 // STICKY NAV - top bar on larger screens, side nav on smaller screens
 const burgerIcon = document.querySelector('.burger-container');
 const burger = document.querySelectorAll('.burger');
@@ -212,12 +231,16 @@ const appearOnScroll = new IntersectionObserver((entries) => {
     }, appearOptions)
 })
 
-fadeUps.forEach(fader => {
-    appearOnScroll.observe(fader)
-})
-sliders.forEach(slider => {
-    appearOnScroll.observe(slider)
-})
+if(screen.availWidth <= 490) {
+    return
+} else {
+    fadeUps.forEach(fader => {
+        appearOnScroll.observe(fader)
+    })
+    sliders.forEach(slider => {
+        appearOnScroll.observe(slider)
+    })
+}
 
 // SOUND EFFECTS on certain elements
 const cheezez = document.querySelectorAll('.cheez')
