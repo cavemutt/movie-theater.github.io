@@ -231,9 +231,7 @@ const appearOnScroll = new IntersectionObserver((entries) => {
     }, appearOptions)
 })
 
-if(screen.availWidth <= 490) {
-    return
-} else {
+if(screen.availWidth >= 490) {
     fadeUps.forEach(fader => {
         appearOnScroll.observe(fader)
     })
