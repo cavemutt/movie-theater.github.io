@@ -680,18 +680,34 @@ img {
     margin-top: 2em;
     align-self: center;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     font-weight: bold;
     font-size: 1rem;
-    gap: 1em;
+    gap: 0.3rem;
+    cursor: url(./assets/arrow-25px.png), default;
 }
-
+.fb,
 .cta-paragraph {
     text-shadow: 0rem 0rem 0.5rem #000;
     color: var(--Gold-dark);
     opacity: 0.9;
     cursor: default;
+    cursor: url(./assets/arrow-25px.png), default;
+
+}
+
+.fb,
+.cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.fb-link {
+    cursor: url(./assets/pointer.png), default;
 }
 
 .email-btn {
@@ -716,6 +732,14 @@ img {
     -o-transition: all 0.2s ease-in-out;
 }
 
+.fb-img {
+    max-width: 2rem;
+    opacity:1;
+}
+
+.fb-img:hover {
+    opacity: 0.7;
+}
 .email-btn:hover,
 .email-btn:focus,
 .email-btn:active {
@@ -893,6 +917,18 @@ img {
     font-weight: 400;
     opacity: 0.8;
     letter-spacing: 0.05rem;
+}
+.fb-share {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top:0.5rem;
+    text-decoration: none;
+    color: var(--Gold-xlight);
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    opacity: 0.8;
 }
 
 .ns-info {
@@ -1210,6 +1246,9 @@ img {
 .sn-movie-img:hover,
 .sn-movie-img:focus {
     scale: 1.3;
+}
+.fb-sn {
+    color: var(--Gold-xlight);
 }
 
 .sn-deadpool {
@@ -1732,6 +1771,12 @@ img {
     overflow-x: hidden;
     z-index: 499;
 
+}
+.fb-contact {
+    color: var(--Gold-xlight);
+    gap: 1rem;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
 }
 
 .contact-section {
@@ -3335,8 +3380,8 @@ footer span {
     }
     .vader {
         padding-top: 0;
-        top: 10em;
-        left: 80vw;
+        top: 0;
+        left: 50%;
         width: 16em;
     }
     .modal-title h2 {
